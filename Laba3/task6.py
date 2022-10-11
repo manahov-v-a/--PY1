@@ -1,13 +1,9 @@
-BYTES_ONE_CHAR = 1  # размер одного символа в байтах
+src = not False and True or False and not True
 
-# никаких магических чисел
-pages = 100
-lines = 50
-chars = 25
+result = True or False and False  # избавляемся от отрицаний
+result = True or False  # избавляемся от логического "И"
+result = True  # избавляемся от логического "ИЛИ"
 
-total_chars = chars*lines*pages
-total_bytes = total_chars
+result = True
 
-disk_size = 1.44*1024**2
-
-print(disk_size//total_bytes)
+print(src == result)

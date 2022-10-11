@@ -1,13 +1,15 @@
-BYTES_ONE_CHAR = 1  # размер одного символа в байтах
+money_capital = 10000
+salary = 5000
+spend = 6000
+increase = 0.05
 
-# никаких магических чисел
-pages = 100
-lines = 50
-chars = 25
+month = 0  # количество месяцев, которое можно прожить
 
-total_chars = chars*lines*pages
-total_bytes = total_chars
+while money_capital - spend*(1+increase)**month >= 0:
+    if money_capital + salary >= spend*(1+increase)**month:
+        money_capital = money_capital + salary - spend*(1+increase)**month
+    else:
+        break
+    month += 1
 
-disk_size = 1.44*1024**2
-
-print(disk_size//total_bytes)
+print(month)

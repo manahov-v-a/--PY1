@@ -2,7 +2,7 @@ import json
 import re
 INPUT_FILE = "input.csv"
 
-""" файл пустой, воэтому заполнил функцией с прошлого задания"""
+""" файл непонятный, заполнил функцией из прошлого задания"""
 
 
 def csv_to_list_dict(filename) -> list[dict]:

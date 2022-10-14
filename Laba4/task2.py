@@ -5,7 +5,6 @@ def get_count_char(str_):
     str_ = str_.lower()
     list_ = str_.split()
     str_ = "".join(list_).translate(str_.maketrans('', '', string.punctuation))
-    dict_ = {}
     return dict(Counter(list(str_)))
 
 

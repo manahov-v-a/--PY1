@@ -3,8 +3,8 @@ import string
 
 def get_count_char(str_):
     str_ = str_.lower()
-    list_ = str_.split()
-    str_ = "".join(list_).translate(str_.maketrans('', '', string.punctuation))
+    str_ = "".join([i for i in "".join(str_.split()) if i.isalpha() == True])
+    # str_ = "".join(list_).translate(str_.maketrans('', '', string.punctuation))
     return dict(Counter(list(str_)))
 
 

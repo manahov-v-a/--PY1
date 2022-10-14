@@ -6,13 +6,7 @@ def get_count_char(str_):
     list_ = str_.split()
     str_ = "".join(list_).translate(str_.maketrans('', '', string.punctuation))
     dict_ = {}
-    for i in str_:
-        if i not in dict_:
-            dict_.setdefault(i, 1)
-        else:
-            dict_[i] += 1
-
-    return dict_
+    return dict(Counter(list(str_)))
 
 
 main_str = """

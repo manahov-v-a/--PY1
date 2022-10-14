@@ -2,10 +2,10 @@ import json
 import re
 INPUT_FILE = "input.csv"
 
-"""-> list[dict]"""
+""" файл пустой, воэтому заполнил функцией с прошлого задания"""
 
 
-def csv_to_list_dict(filename):
+def csv_to_list_dict(filename) -> list[dict]:
     fl = []
     with open(filename, "r") as f:
         for line in f:

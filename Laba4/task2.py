@@ -1,5 +1,5 @@
 import string
-
+from collections import Counter
 
 def get_count_char(str_):
     str_ = str_.lower()

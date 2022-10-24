@@ -7,6 +7,12 @@ def get_count_char(str_):
     # str_ = "".join(list_).translate(str_.maketrans('', '', string.punctuation))
     return dict(Counter(list(str_)))
 
+def procent_dict(dict_):
+    sum_value = sum(dict_.values())
+    for i in dict_:
+        dict_['%s' % i] = dict_.get('%s' % i)/sum_value * 100
+    return dict_
+
 
 main_str = """
     Данное предложение будет разбиваться на отдельные слова. 

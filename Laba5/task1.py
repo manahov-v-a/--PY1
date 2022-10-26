@@ -16,5 +16,5 @@ def gre(name, value):
 
 res = []
 for i in range(16):
-    res.append({a[x]: gre(a[x], i) for x in range(len(a))})
+    res.append({x: gre(x, i) for x in a})
 pprint(res)
